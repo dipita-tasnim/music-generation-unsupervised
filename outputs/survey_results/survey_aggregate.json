@@ -1,0 +1,32 @@
+{
+  "LSTM Autoencoder": {
+    "mean": 2.84,
+    "count": 50,
+    "num_samples": 5
+  },
+  "Markov Chain": {
+    "mean": 2.3,
+    "count": 50,
+    "num_samples": 5
+  },
+  "RLHF-Tuned": {
+    "mean": 3.45,
+    "count": 100,
+    "num_samples": 10
+  },
+  "Random Generator": {
+    "mean": 1.38,
+    "count": 50,
+    "num_samples": 5
+  },
+  "Transformer": {
+    "mean": 3.9,
+    "count": 100,
+    "num_samples": 10
+  },
+  "VAE": {
+    "mean": 3.11,
+    "count": 160,
+    "num_samples": 16
+  }
+}

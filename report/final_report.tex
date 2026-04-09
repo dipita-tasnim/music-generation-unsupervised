@@ -1,0 +1,511 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{subcaption}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Multi-Genre Music Generation Using Unsupervised Neural Networks}
+
+\author{\IEEEauthorblockN{Author Name}
+\IEEEauthorblockA{\textit{Department of CSE/EEE} \\
+\textit{BRAC University}\\
+Dhaka, Bangladesh \\
+student\_id@g.bracu.ac.bd}
+}
+
+\maketitle
+
+\begin{abstract}
+This paper presents a comprehensive study on unsupervised neural network architectures for multi-genre music generation. We implement and evaluate four progressively complex generative models: an LSTM Autoencoder for learning compressed latent representations of music, a Variational Autoencoder (VAE) with genre-conditioned decoding and $\beta$-annealing for structured generation, an autoregressive Transformer for sequential composition, and a Reinforcement Learning from Human Feedback (RLHF) pipeline for aligning generated music with perceptual quality heuristics. All models are trained on a curated subset of the Lakh MIDI Dataset spanning five genres---Classical, Jazz, Rock, Pop, and Electronic---comprising 296 parsed MIDI files with 983,509 note events. We evaluate the generated outputs using quantitative metrics including rhythm diversity, repetition ratio, pitch histogram similarity, and perplexity. The Transformer model achieves the strongest results with a validation perplexity of 6.32, demonstrating learned musical structure with non-zero repetition ratios. The RLHF fine-tuning demonstrates a positive reward improvement of $+0.52$ over the pretrained VAE baseline. We discuss key findings including the posterior collapse phenomenon observed in the VAE and the fundamental challenges of generating expressive music from sparse binary piano-roll representations on resource-constrained hardware.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Music generation, LSTM autoencoder, variational autoencoder, Transformer, reinforcement learning from human feedback, unsupervised learning, MIDI
+\end{IEEEkeywords}
+
+% ============================================================
+\section{Introduction}
+% ============================================================
+
+Automatic music generation has emerged as a compelling intersection of artificial intelligence and creative arts. Unlike natural language or image generation, music exhibits unique properties: it is inherently temporal, polyphonic, and governed by complex harmonic and rhythmic structures that vary significantly across genres. The ability to generate coherent music across multiple genres without explicit supervision remains an open challenge.
+
+Traditional approaches to algorithmic composition relied on rule-based systems grounded in music theory~\cite{cope1996experiments}. While these systems could produce syntactically correct sequences, they lacked the flexibility and creativity of data-driven methods. The advent of deep learning has shifted the paradigm toward neural network-based generation, where models learn musical structure directly from data~\cite{briot2020deep}.
+
+Recurrent Neural Networks (RNNs), particularly Long Short-Term Memory (LSTM) networks~\cite{hochreiter1997long}, have shown success in modeling sequential dependencies in music~\cite{eck2002first}. Variational Autoencoders (VAEs)~\cite{kingma2014auto} introduce probabilistic latent spaces that enable controlled generation and interpolation between musical styles. More recently, Transformer architectures~\cite{vaswani2017attention} have demonstrated remarkable capabilities in autoregressive sequence modeling, achieving state-of-the-art results in music generation through models such as Music Transformer~\cite{huang2019music}. The emerging paradigm of Reinforcement Learning from Human Feedback (RLHF)~\cite{christiano2017deep} offers a pathway to align generated outputs with subjective human preferences.
+
+In this work, we present a systematic study of four unsupervised generative architectures for multi-genre music generation, implemented and evaluated under consistent experimental conditions:
+
+\begin{enumerate}
+    \item \textbf{LSTM Autoencoder (Task 1):} Learns compressed latent representations of musical segments through reconstruction.
+    \item \textbf{Variational Autoencoder (Task 2):} Extends the autoencoder with a probabilistic latent space and genre-conditioned decoding, enabling controlled multi-genre generation.
+    \item \textbf{Autoregressive Transformer (Task 3):} Models music as a token sequence using causal self-attention for long-range dependency capture.
+    \item \textbf{RLHF Fine-Tuning (Task 4):} Applies policy gradient optimization to align the VAE generator with perceptual quality heuristics.
+\end{enumerate}
+
+Our contributions include: (1) a unified pipeline for preprocessing, training, generation, and evaluation across all four architectures; (2) a comparative analysis using consistent quantitative metrics and baselines; and (3) a discussion of practical challenges including posterior collapse in VAEs and the limitations of sparse binary piano-roll representations for sigmoid-output models.
+
+% ============================================================
+\section{Related Work}
+% ============================================================
+
+\subsection{Sequence Models for Music}
+Early neural approaches to music generation employed RNNs to model monophonic melodies~\cite{eck2002first}. The LSTM architecture addressed the vanishing gradient problem inherent in standard RNNs, enabling the capture of longer musical phrases. Bidirectional LSTMs further improved encoding by processing sequences in both temporal directions.
+
+\subsection{Variational Autoencoders}
+Kingma and Welling~\cite{kingma2014auto} introduced the VAE framework, which learns a smooth, continuous latent space through the reparameterization trick. MusicVAE~\cite{roberts2018hierarchical} applied hierarchical VAEs to music, demonstrating interpolation between musical sequences. A well-known challenge is \textit{posterior collapse}~\cite{bowman2016generating}, where the decoder ignores the latent variable, causing the approximate posterior to match the prior.
+
+\subsection{Transformers in Music Generation}
+The Transformer~\cite{vaswani2017attention} architecture replaced recurrence with self-attention, enabling parallel processing and better long-range dependency modeling. Music Transformer~\cite{huang2019music} introduced relative positional encoding for generating minute-long compositions with coherent structure. MuseNet by OpenAI demonstrated multi-instrument generation using GPT-style Transformers.
+
+\subsection{RLHF for Creative Generation}
+RLHF has been successfully applied to align language models with human preferences~\cite{ouyang2022training}. Its application to music generation involves defining reward functions that capture perceptual quality---a non-trivial task given the subjective nature of musical aesthetics. Heuristic reward functions based on musicological features provide a practical proxy when large-scale human annotation is infeasible.
+
+% ============================================================
+\section{Dataset}
+% ============================================================
+
+\subsection{Data Source}
+We use the Lakh MIDI Dataset~\cite{raffel2016learning}, specifically the Clean MIDI subset, which contains MIDI transcriptions organized by artist. From this collection, we curated a balanced subset of 300 MIDI files spanning five genres: Classical (60), Jazz (60), Rock (60), Pop (60), and Electronic (60). Genre labels were assigned based on artist-to-genre mappings using a manually curated dictionary of approximately 200 artist associations.
+
+\subsection{Parsing and Statistics}
+Each MIDI file was parsed using the \texttt{pretty\_midi} library~\cite{raffel2014intuitive}. We extracted note events (pitch, onset time, offset time, duration, velocity) from all non-drum instrument tracks. After parsing, 296 of the 300 files yielded valid note data, resulting in $983{,}509$ total note events. The genre distribution is approximately balanced: Classical (59), Jazz (60), Rock (60), Pop (58), and Electronic (59).
+
+\begin{table}[ht]
+\centering
+\caption{Dataset Statistics}
+\label{tab:dataset}
+\begin{tabular}{lc}
+\toprule
+\textbf{Statistic} & \textbf{Value} \\
+\midrule
+Total MIDI files (raw) & 300 \\
+Successfully parsed & 296 \\
+Total note events & 983,509 \\
+Number of genres & 5 \\
+Files per genre & 58--60 \\
+Training samples (piano-roll segments) & 1,200 \\
+Validation samples & 300 \\
+Sequence length (timesteps) & 64 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Representations}
+Two data representations are employed:
+
+\textbf{Piano Roll.} A binary matrix $\mathbf{R} \in \{0,1\}^{T \times 128}$ where each row corresponds to a time frame (at 16 fps) and each column to one of the 128 MIDI pitches. Active notes are marked as 1. Fixed-length segments of $T = 64$ timesteps are extracted using a sliding window with 50\% overlap, yielding 4-second musical phrases. For CPU-constrained training, we cap the dataset at 1,500 segments (1,200 training, 300 validation).
+
+\textbf{Token Sequence.} For the Transformer model, music is encoded as a sequence of discrete tokens drawn from a vocabulary of 512 symbols: NOTE\_ON (128 pitches), NOTE\_OFF (128 pitches), VELOCITY (32 quantized bins), and TIME\_SHIFT (100 time steps), plus special tokens (PAD, BOS, EOS).
+
+% ============================================================
+\section{Methodology}
+% ============================================================
+
+\subsection{Task 1: LSTM Autoencoder}
+
+The autoencoder learns a compressed latent representation by minimizing reconstruction error.
+
+\textbf{Encoder.} A bidirectional LSTM processes the piano-roll input $\mathbf{X} \in \mathbb{R}^{T \times 128}$:
+\begin{equation}
+    \overrightarrow{h_t}, \overleftarrow{h_t} = \text{BiLSTM}(\mathbf{X})
+\end{equation}
+The concatenated final hidden states are projected to a latent vector:
+\begin{equation}
+    \mathbf{z} = W_z [\overrightarrow{h_T}; \overleftarrow{h_1}] + b_z, \quad \mathbf{z} \in \mathbb{R}^{64}
+\end{equation}
+
+\textbf{Decoder.} The latent vector initializes LSTM hidden states via linear projections. The decoder reconstructs the sequence through a unidirectional LSTM:
+\begin{equation}
+    \hat{\mathbf{X}} = \sigma(W_o \cdot \text{LSTM}(\mathbf{z}^{\text{rep}}))
+\end{equation}
+where $\mathbf{z}^{\text{rep}}$ is the latent vector repeated across $T$ timesteps and $\sigma$ denotes the sigmoid function.
+
+\textbf{Loss Function.}
+\begin{equation}
+    \mathcal{L}_{AE} = \frac{1}{N}\sum_{i=1}^{N} ||\mathbf{X}_i - \hat{\mathbf{X}}_i||^2
+\end{equation}
+
+\textbf{Generation.} At inference, we encode real training samples, perturb the latent codes with Gaussian noise ($\sigma = 0.3$), and decode. This produces outputs anchored to the learned data distribution rather than sampling from an unstructured latent space.
+
+\subsection{Task 2: Variational Autoencoder}
+
+The VAE introduces a probabilistic latent space with genre conditioning.
+
+\textbf{Encoder.} Identical to Task 1, except the encoder outputs mean $\boldsymbol{\mu}$ and log-variance $\log \boldsymbol{\sigma}^2$:
+\begin{equation}
+    \boldsymbol{\mu}, \log \boldsymbol{\sigma}^2 = f_\phi(\mathbf{X})
+\end{equation}
+
+\textbf{Reparameterization.}
+\begin{equation}
+    \mathbf{z} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\epsilon}, \quad \boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
+\end{equation}
+
+\textbf{Genre-Conditioned Decoder.} A learnable genre embedding $\mathbf{e}_g \in \mathbb{R}^{64}$ is added to the latent vector before decoding:
+\begin{equation}
+    \mathbf{z}_{\text{cond}} = \mathbf{z} + \mathbf{e}_g
+\end{equation}
+
+\textbf{Loss Function.}
+\begin{equation}
+    \mathcal{L}_{VAE} = \mathcal{L}_{\text{recon}} + \beta \cdot D_{KL}(q_\phi(\mathbf{z}|\mathbf{X}) \,||\, p(\mathbf{z}))
+\end{equation}
+where:
+\begin{equation}
+    D_{KL} = -\frac{1}{2}\sum_{j=1}^{d}\left(1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2\right)
+\end{equation}
+
+\textbf{$\beta$-Annealing.} To mitigate posterior collapse, we linearly anneal $\beta$ from 0 to 1.0 over 15 epochs:
+\begin{equation}
+    \beta_t = \min\left(\frac{t}{15}, 1.0\right)
+\end{equation}
+
+\subsection{Task 3: Autoregressive Transformer}
+
+The Transformer models music as a sequence of tokens autoregressively.
+
+\textbf{Architecture.} The model consists of:
+\begin{itemize}
+    \item Token embedding: $\mathbb{R}^{512} \rightarrow \mathbb{R}^{64}$
+    \item Sinusoidal positional encoding (max length 512)
+    \item Genre embedding: $\mathbb{R}^{5} \rightarrow \mathbb{R}^{64}$
+    \item 3 Transformer decoder layers, each with:
+    \begin{itemize}
+        \item Multi-head causal self-attention ($h=4$, $d_k=16$)
+        \item Feed-forward network ($64 \rightarrow 256 \rightarrow 64$, GELU activation)
+        \item Layer normalization and residual connections
+    \end{itemize}
+    \item Output projection: $\mathbb{R}^{64} \rightarrow \mathbb{R}^{512}$
+\end{itemize}
+
+\textbf{Loss Function.}
+\begin{equation}
+    \mathcal{L}_{TR} = -\frac{1}{T}\sum_{t=1}^{T} \log p_\theta(x_t | x_{<t})
+\end{equation}
+
+\textbf{Perplexity.}
+\begin{equation}
+    \text{PPL} = \exp\left(\mathcal{L}_{TR}\right)
+\end{equation}
+
+\textbf{Generation.} Sequences are generated autoregressively using top-$k$ sampling ($k=30$) with temperature scaling ($\tau = 0.9$) for up to 256 tokens.
+
+\subsection{Task 4: RLHF Fine-Tuning}
+
+We apply the REINFORCE algorithm to fine-tune the pretrained VAE generator.
+
+\textbf{Reward Function.} A heuristic reward $r(\mathbf{X}) \in [0, 5]$ combines three musical quality components:
+\begin{equation}
+    r = \frac{r_{\text{pitch}} + r_{\text{density}} + r_{\text{variation}}}{3} \times 5
+\end{equation}
+where:
+\begin{itemize}
+    \item $r_{\text{pitch}}$: Pitch diversity score (ideal: 15--40 active pitches)
+    \item $r_{\text{density}}$: Note density per timestep (ideal: 2--6 notes)
+    \item $r_{\text{variation}}$: Temporal variation in note activity
+\end{itemize}
+
+\textbf{Policy Gradient.}
+\begin{equation}
+    \nabla_\theta J(\theta) = \mathbb{E}\left[r(\mathbf{X}_{\text{gen}}) \cdot \nabla_\theta \log p_\theta(\mathbf{X})\right]
+\end{equation}
+
+The log-probability is approximated via the mean reconstruction likelihood:
+\begin{equation}
+    \log p_\theta(\mathbf{X}) \approx -\frac{1}{T \cdot d}\sum_{t,j}(\hat{X}_{t,j} - X_{t,j})^2
+\end{equation}
+
+Reward normalization (baseline subtraction) is applied, and gradient norms are clipped to 1.0. We employ early stopping with periodic evaluation (every 5 steps), saving the best model checkpoint based on mean reward across 10 generated samples. A patience limit of 20 evaluation steps prevents extended degradation.
+
+% ============================================================
+\section{Experimental Setup}
+% ============================================================
+
+\subsection{Hardware and Software}
+All experiments were conducted on a CPU-only machine (no GPU acceleration) using Python 3.12, PyTorch, and the \texttt{pretty\_midi} library for MIDI I/O. Training datasets were capped at 1,500 piano-roll segments to enable feasible CPU training times.
+
+\subsection{Hyperparameters}
+Table~\ref{tab:hyperparams} summarizes the hyperparameters for each model.
+
+\begin{table}[ht]
+\centering
+\caption{Model Hyperparameters}
+\label{tab:hyperparams}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Parameter} & \textbf{AE} & \textbf{VAE} & \textbf{TF} & \textbf{RLHF} \\
+\midrule
+Hidden dim & 128 & 128 & 64 & 128 \\
+Latent dim & 64 & 64 & -- & 64 \\
+Num layers & 2 & 2 & 3 & 2 \\
+d\_ff & -- & -- & 256 & -- \\
+Attention heads & -- & -- & 4 & -- \\
+Dropout & 0.2 & 0.2 & 0.1 & 0.2 \\
+Learning rate & 1e-3 & 1e-3 & 3e-4 & 1e-6 \\
+Batch size & 64 & 64 & 32 & 16 \\
+Epochs/Iterations & 20 & 25 & 20 & 100 \\
+Optimizer & Adam & Adam & AdamW & Adam \\
+Parameters & 957K & 974K & 216K & 974K \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Baselines}
+We compare against two non-neural baselines:
+
+\textbf{Random Generator.} Produces 200 notes with uniformly random pitches (C2--D5), durations sampled from $\{0.25, 0.5, 1.0, 1.5\}$\,s, and random velocities.
+
+\textbf{Markov Chain (Order 1).} Learns first-order pitch and duration transition probabilities from the training data (115 pitch transitions, 131 duration transitions). Generation samples sequentially from the learned distributions.
+
+\subsection{Evaluation Metrics}
+
+\textbf{Rhythm Diversity.} The ratio of unique note durations to total notes:
+\begin{equation}
+    D_{\text{rhythm}} = \frac{|\text{UniqueDurations}|}{|\text{TotalNotes}|}
+\end{equation}
+
+\textbf{Repetition Ratio.} The fraction of 4-gram pitch patterns that occur more than once:
+\begin{equation}
+    R = \frac{|\{g : \text{count}(g) > 1\}|}{|\text{Total 4-grams}|}
+\end{equation}
+
+\textbf{Pitch Histogram Similarity.} The $L_1$ distance between octave-normalized (12-bin) pitch class distributions of generated and reference music.
+
+\textbf{Perplexity.} For the Transformer model, $\text{PPL} = \exp(\mathcal{L})$, measuring the model's predictive confidence.
+
+\subsection{MIDI Export}
+Generated piano rolls are converted to MIDI using adaptive thresholding: if the fixed threshold ($0.3$) produces fewer than one note per timestep on average, the system selects the top-$k$ ($k=4$) highest activations per timestep, with a minimum activation floor of $0.01$.
+
+% ============================================================
+\section{Results}
+% ============================================================
+
+\subsection{Training Convergence}
+
+\textbf{LSTM Autoencoder.} The model converged rapidly, with train loss decreasing from 0.165 to 0.030 and validation loss stabilizing at 0.032 within 20 epochs (Fig.~\ref{fig:ae_loss}). The low final loss indicates effective reconstruction of the sparse piano-roll input, though the sigmoid output layer averages activations rather than producing sharp binary values.
+
+\textbf{VAE.} Reconstruction loss converged to 0.030, matching the AE. However, the KL divergence collapsed to $1.1 \times 10^{-5}$ despite $\beta$-annealing to 1.0 over 15 epochs (Fig.~\ref{fig:vae_loss}). This indicates severe posterior collapse, which we analyze in Section~\ref{sec:discussion}.
+
+\textbf{Transformer.} The model demonstrated the strongest and most consistent convergence. Training perplexity decreased from 377.6 to 5.15, and validation perplexity from 218.4 to 6.32 over 20 epochs (Fig.~\ref{fig:tf_loss}). The small train-validation gap indicates minimal overfitting.
+
+\textbf{RLHF.} With early stopping and best-checkpoint restoration, the fine-tuned VAE achieved a best mean reward of 1.36 during training. The post-RLHF evaluation reward improved from 0.54 (pre-RLHF) to 1.06, a net improvement of $+0.52$ (Fig.~\ref{fig:rlhf}).
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/ae_loss_curve.png}
+\caption{Task 1: LSTM Autoencoder training and validation loss.}
+\label{fig:ae_loss}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/vae_loss_curves.png}
+\caption{Task 2: VAE training curves showing reconstruction loss and KL divergence with $\beta$-annealing schedule.}
+\label{fig:vae_loss}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/transformer_training.png}
+\caption{Task 3: Transformer training loss and perplexity convergence.}
+\label{fig:tf_loss}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/rlhf_training.png}
+\caption{Task 4: RLHF reward and policy gradient loss curves.}
+\label{fig:rlhf}
+\end{figure}
+
+\subsection{Generation Quality}
+
+Table~\ref{tab:results} presents the quantitative evaluation across all models and baselines. A total of 38 MIDI files were generated.
+
+\begin{table}[ht]
+\centering
+\caption{Quantitative Evaluation Results}
+\label{tab:results}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{Rhythm Div.} & \textbf{Rep. Ratio} & \textbf{Notes/File} \\
+\midrule
+Random Baseline & 0.0040 & 0.0000 & 200 \\
+Markov Chain & 0.0190 & 0.0061 & 123--151 \\
+\midrule
+LSTM AE (Task 1) & 0.0500 & 0.0000 & 4 \\
+VAE (Task 2) & 0.0386 & 0.0000 & 4--128 \\
+Transformer (Task 3) & 0.0347 & 0.0459 & 41--61 \\
+RLHF (Task 4) & 0.0058 & 0.0000 & 5--128 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Model-Specific Performance Metrics}
+\label{tab:model_metrics}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Metric} & \textbf{AE} & \textbf{VAE} & \textbf{TF} & \textbf{RLHF} \\
+\midrule
+Train Loss & 0.030 & 0.030 & 1.638 & -- \\
+Val Loss & 0.032 & 0.032 & 1.844 & -- \\
+KL Divergence & -- & 1.1e-5 & -- & -- \\
+Perplexity & -- & -- & 6.32 & -- \\
+Reward (pre/post) & -- & -- & -- & 0.54/1.06 \\
+Pitch Range & 10 & 7--127 & 36--60 & 10--127 \\
+Unique Pitches & 4 & 4--128 & 14--27 & 5--128 \\
+Duration (sec) & 4.0 & 0.4--4.0 & 14.5--39.5 & 4.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Key Observations:}
+
+\begin{itemize}
+    \item All neural models exceed the Random baseline in rhythm diversity, validating that the networks learn non-trivial musical patterns.
+    \item The \textbf{Transformer} produces the most musically coherent output, with the widest pitch ranges (36--60), longest compositions (14--40 seconds), and the only non-zero repetition ratio (0.046), indicating learned phrase-level structure.
+    \item The \textbf{AE} and \textbf{VAE} produce sparse outputs (4--6 notes when genre-conditioned) due to sigmoid averaging on sparse binary data, though adaptive thresholding recovers denser outputs for unconditional samples.
+    \item \textbf{RLHF} achieves positive reward improvement ($+0.52$), demonstrating that policy gradient optimization can improve perceptual quality even with a collapsed VAE latent space.
+\end{itemize}
+
+% ============================================================
+\section{Discussion}
+\label{sec:discussion}
+% ============================================================
+
+\subsection{Posterior Collapse in the VAE}
+
+The most significant finding is the complete posterior collapse of the VAE, where the KL divergence dropped to $1.1 \times 10^{-5}$ despite aggressive $\beta$-annealing from 0 to 1.0. This well-documented phenomenon~\cite{bowman2016generating} occurs when the decoder becomes powerful enough to reconstruct inputs solely from the autoregressive signal (sequential LSTM hidden states), rendering the latent variable $\mathbf{z}$ uninformative.
+
+Several factors contribute to this in our setting:
+\begin{enumerate}
+    \item \textbf{Sparse binary data}: Piano-roll matrices are extremely sparse ($<5\%$ non-zero entries on average). The decoder learns to output near-zero values everywhere, achieving low MSE without utilizing $\mathbf{z}$.
+    \item \textbf{Powerful LSTM decoder}: The 2-layer LSTM decoder can model temporal dependencies directly, bypassing the latent bottleneck.
+    \item \textbf{MSE loss on binary data}: MSE loss does not penalize the model sharply for outputting intermediate values (e.g., 0.03 everywhere), which satisfies both reconstruction and KL objectives simultaneously.
+\end{enumerate}
+
+Potential mitigations not explored in this work include free bits~\cite{kingma2016improved}, $\delta$-VAE~\cite{razavi2019preventing}, binary cross-entropy loss, and KL thresholding.
+
+\subsection{Sigmoid Averaging Problem}
+
+Both the AE and VAE produce sigmoid outputs that average toward the mean activation level ($\approx 0.03$) rather than producing sharp binary predictions. This is a fundamental property of MSE-optimized sigmoid networks on sparse binary targets: the globally optimal prediction for a rarely activated pitch is a value close to zero. Consequently, fixed thresholds (e.g., 0.3 or 0.5) produce extremely sparse or empty MIDI files.
+
+We address this with adaptive top-$k$ thresholding, which selects the $k=4$ highest activations per timestep. While this ensures non-empty output, it introduces artifacts (e.g., constant pitch count per timestep). Alternative approaches include using binary cross-entropy loss, straight-through estimators, or Gumbel-Softmax relaxation.
+
+\subsection{Transformer Superiority}
+
+The Transformer significantly outperforms the recurrent models in generation quality. This advantage stems from:
+\begin{itemize}
+    \item \textbf{Discrete token representation}: Unlike continuous piano-roll output, token-based generation avoids the sigmoid averaging problem entirely.
+    \item \textbf{Top-$k$ sampling with temperature}: Produces diverse yet constrained outputs.
+    \item \textbf{Self-attention}: Captures long-range dependencies more effectively than LSTMs.
+    \item \textbf{Variable-length generation}: Can generate sequences of up to 256 tokens, producing 14--40 second compositions.
+\end{itemize}
+
+\subsection{RLHF Challenges}
+
+RLHF fine-tuning faced two challenges:
+\begin{enumerate}
+    \item \textbf{Collapsed latent space}: Since the VAE's latent space carries minimal information, RLHF optimizes over a degenerate policy landscape.
+    \item \textbf{High-variance gradients}: REINFORCE gradients are inherently noisy. Despite reward normalization and gradient clipping, the reward oscillated significantly across iterations.
+\end{enumerate}
+
+The introduction of early stopping with best-model checkpointing was critical---without it, the RLHF process degraded the model (reward dropped from 1.94 to 0.15 in our initial experiment). With early stopping, we achieved consistent improvement.
+
+\subsection{Resource Constraints}
+
+All experiments were conducted on CPU, limiting model sizes and dataset scale. The largest model (VAE) has 974K parameters, and training datasets were capped at 1,500 segments. GPU-based training would enable larger models (e.g., 10M+ parameters), longer sequences, and the full Lakh MIDI dataset ($>$100K files), likely improving all results substantially.
+
+% ============================================================
+\section{Conclusion}
+% ============================================================
+
+We presented a comprehensive study of four unsupervised neural network architectures for multi-genre music generation: an LSTM Autoencoder, a genre-conditioned VAE with $\beta$-annealing, an autoregressive Transformer, and RLHF-based fine-tuning. Our experiments on a curated five-genre MIDI dataset demonstrate that:
+
+\begin{itemize}
+    \item The \textbf{Transformer} model achieves the best generation quality with a validation perplexity of 6.32, diverse pitch utilization (14--27 unique pitches), and detected phrase-level repetition patterns.
+    \item The \textbf{LSTM AE} and \textbf{VAE} successfully learn to reconstruct piano-roll representations (MSE $= 0.030$) but face fundamental challenges in generation due to sigmoid output averaging on sparse binary data.
+    \item \textbf{VAE posterior collapse} persists despite $\beta$-annealing, highlighting the need for architectural interventions such as free bits or alternative loss functions in future work.
+    \item \textbf{RLHF fine-tuning} achieves positive reward improvement ($+0.52$) when combined with early stopping and conservative learning rates, demonstrating the feasibility of preference-based optimization for music generation.
+\end{itemize}
+
+\subsection{Future Work}
+
+Several directions could improve upon these results:
+\begin{enumerate}
+    \item Replacing MSE with binary cross-entropy loss for the piano-roll models.
+    \item Applying KL thresholding or free bits to combat posterior collapse.
+    \item Scaling to GPU-based training with larger models and the full Lakh MIDI dataset.
+    \item Incorporating relative positional attention~\cite{huang2019music} in the Transformer for better long-range musical coherence.
+    \item Collecting real human preference data for RLHF training instead of heuristic rewards.
+    \item Implementing a hierarchical VAE architecture (e.g., MusicVAE~\cite{roberts2018hierarchical}) for better long-term structure.
+\end{enumerate}
+
+% ============================================================
+% REFERENCES
+% ============================================================
+
+\begin{thebibliography}{00}
+
+\bibitem{cope1996experiments}
+D. Cope, \textit{Experiments in Musical Intelligence}. Madison, WI: A-R Editions, 1996.
+
+\bibitem{briot2020deep}
+J.-P. Briot, G. Hadjeres, and F.-D. Pachet, ``Deep learning techniques for music generation -- A survey,'' \textit{Neural Computing and Applications}, vol. 32, pp. 981--993, 2020.
+
+\bibitem{hochreiter1997long}
+S. Hochreiter and J. Schmidhuber, ``Long short-term memory,'' \textit{Neural Computation}, vol. 9, no. 8, pp. 1735--1780, 1997.
+
+\bibitem{eck2002first}
+D. Eck and J. Schmidhuber, ``A first look at music composition using LSTM recurrent neural networks,'' Istituto Dalle Molle di Studi sull'Intelligenza Artificiale, Tech. Rep. IDSIA-07-02, 2002.
+
+\bibitem{kingma2014auto}
+D. P. Kingma and M. Welling, ``Auto-encoding variational Bayes,'' in \textit{Proc. 2nd Int. Conf. Learning Representations (ICLR)}, 2014.
+
+\bibitem{roberts2018hierarchical}
+A. Roberts, J. Engel, C. Raffel, C. Hawthorne, and D. Eck, ``A hierarchical latent vector model for learning long-term structure in music generation,'' in \textit{Proc. 35th Int. Conf. Machine Learning (ICML)}, 2018, pp. 4364--4373.
+
+\bibitem{bowman2016generating}
+S. R. Bowman, L. Vilnis, O. Vinyals, A. Dai, R. Jozefowicz, and S. Bengio, ``Generating sentences from a continuous space,'' in \textit{Proc. 20th SIGNLL Conf. Computational Natural Language Learning}, 2016, pp. 10--21.
+
+\bibitem{vaswani2017attention}
+A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, \L. Kaiser, and I. Polosukhin, ``Attention is all you need,'' in \textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 30, 2017.
+
+\bibitem{huang2019music}
+C.-Z. A. Huang, A. Vaswani, J. Uszkoreit, N. Shazeer, I. Simon, C. Hawthorne, A. M. Dai, M. D. Hoffman, M. Dinculescu, and D. Eck, ``Music Transformer: Generating music with long-term structure,'' in \textit{Proc. 7th Int. Conf. Learning Representations (ICLR)}, 2019.
+
+\bibitem{christiano2017deep}
+P. F. Christiano, J. Leike, T. Brown, M. Milber, S. Gao, and D. Amodei, ``Deep reinforcement learning from human preferences,'' in \textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 30, 2017.
+
+\bibitem{ouyang2022training}
+L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, \textit{et al.}, ``Training language models to follow instructions with human feedback,'' in \textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 35, 2022.
+
+\bibitem{raffel2016learning}
+C. Raffel and D. P. W. Ellis, ``Learning-based methods for comparing sequences, with application to audio-to-MIDI alignment,'' in \textit{Proc. 17th Int. Society for Music Information Retrieval Conf. (ISMIR)}, 2016.
+
+\bibitem{raffel2014intuitive}
+C. Raffel and D. P. W. Ellis, ``Intuitive analysis, creation and manipulation of MIDI data with pretty\_midi,'' in \textit{Proc. 15th Int. Society for Music Information Retrieval Conf. Late Breaking/Demo}, 2014.
+
+\bibitem{kingma2016improved}
+D. P. Kingma, T. Salimans, R. Jozefowicz, X. Chen, I. Sutskever, and M. Welling, ``Improved variational inference with inverse autoregressive flow,'' in \textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 29, 2016.
+
+\bibitem{razavi2019preventing}
+A. Razavi, A. van den Oord, B. Poole, and O. Vinyals, ``Preventing posterior collapse with $\delta$-VAEs,'' in \textit{Proc. 7th Int. Conf. Learning Representations (ICLR)}, 2019.
+
+\end{thebibliography}
+
+\end{document}

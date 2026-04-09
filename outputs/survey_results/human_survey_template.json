@@ -1,0 +1,651 @@
+{
+  "instructions": "Please listen to each music sample and rate it on a scale of 1-5:\n  1 = Very poor (random/noisy)\n  2 = Poor (some structure but unpleasant)\n  3 = Fair (recognizable as music)\n  4 = Good (pleasant and coherent)\n  5 = Excellent (creative and musical)",
+  "samples": [
+    {
+      "id": 1,
+      "file": "ae_generated_1.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 2,
+      "file": "ae_generated_2.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 3,
+      "file": "ae_generated_3.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 4,
+      "file": "ae_generated_4.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 5,
+      "file": "ae_generated_5.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 6,
+      "file": "baseline_markov_1.mid",
+      "model": "Markov Chain",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 7,
+      "file": "baseline_markov_2.mid",
+      "model": "Markov Chain",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 8,
+      "file": "baseline_markov_3.mid",
+      "model": "Markov Chain",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 9,
+      "file": "baseline_markov_4.mid",
+      "model": "Markov Chain",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 10,
+      "file": "baseline_markov_5.mid",
+      "model": "Markov Chain",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 11,
+      "file": "baseline_random_1.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 12,
+      "file": "baseline_random_2.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 13,
+      "file": "baseline_random_3.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 14,
+      "file": "baseline_random_4.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 15,
+      "file": "baseline_random_5.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 16,
+      "file": "rlhf_sample_1.mid",
+      "model": "RLHF-Tuned",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 17,
+      "file": "rlhf_sample_2.mid",
+      "model": "RLHF-Tuned",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 18,
+      "file": "rlhf_sample_3.mid",
+      "model": "RLHF-Tuned",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 19,
+      "file": "rlhf_sample_4.mid",
+      "model": "RLHF-Tuned",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 20,
+      "file": "rlhf_sample_5.mid",
+      "model": "RLHF-Tuned",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 21,
+      "file": "transformer_generated_classical_1.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 22,
+      "file": "transformer_generated_classical_6.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 23,
+      "file": "transformer_generated_electronic_10.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 24,
+      "file": "transformer_generated_electronic_5.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 25,
+      "file": "transformer_generated_jazz_2.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 26,
+      "file": "transformer_generated_jazz_7.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 27,
+      "file": "transformer_generated_pop_4.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 28,
+      "file": "transformer_generated_pop_9.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 29,
+      "file": "transformer_generated_rock_3.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 30,
+      "file": "transformer_generated_rock_8.mid",
+      "model": "Transformer",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 31,
+      "file": "vae_generated_classical.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 32,
+      "file": "vae_generated_electronic.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 33,
+      "file": "vae_generated_jazz.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 34,
+      "file": "vae_generated_pop.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 35,
+      "file": "vae_generated_random_1.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 36,
+      "file": "vae_generated_random_2.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 37,
+      "file": "vae_generated_random_3.mid",
+      "model": "Random Generator",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    },
+    {
+      "id": 38,
+      "file": "vae_generated_rock.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": {
+        "participant_1": null,
+        "participant_2": null,
+        "participant_3": null,
+        "participant_4": null,
+        "participant_5": null,
+        "participant_6": null,
+        "participant_7": null,
+        "participant_8": null,
+        "participant_9": null,
+        "participant_10": null
+      }
+    }
+  ]
+}

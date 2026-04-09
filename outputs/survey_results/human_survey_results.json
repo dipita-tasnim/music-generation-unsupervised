@@ -1,0 +1,3891 @@
+{
+  "survey_info": {
+    "num_participants": 10,
+    "num_samples": 51,
+    "rating_scale": "1-5 (1=poor, 5=excellent)",
+    "criteria": [
+      "musicality",
+      "coherence",
+      "genre_match",
+      "overall"
+    ]
+  },
+  "samples": [
+    {
+      "file": "ae_generated_1.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "ae_generated_2.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 9,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "ae_generated_3.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "file": "ae_generated_4.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 5
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 8,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 5
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "file": "ae_generated_5.mid",
+      "model": "LSTM Autoencoder",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        }
+      ]
+    },
+    {
+      "file": "baseline_markov_1.mid",
+      "model": "Markov Chain",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "baseline_markov_2.mid",
+      "model": "Markov Chain",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "file": "baseline_markov_3.mid",
+      "model": "Markov Chain",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "file": "baseline_markov_4.mid",
+      "model": "Markov Chain",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "baseline_markov_5.mid",
+      "model": "Markov Chain",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "baseline_random_1.mid",
+      "model": "Random Generator",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 2,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 3,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 9,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 10,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        }
+      ]
+    },
+    {
+      "file": "baseline_random_2.mid",
+      "model": "Random Generator",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 6,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 9,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 10,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        }
+      ]
+    },
+    {
+      "file": "baseline_random_3.mid",
+      "model": "Random Generator",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 2,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 3,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 4,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 5,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 6,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 7,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 8,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "baseline_random_4.mid",
+      "model": "Random Generator",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 4,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 9,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 10,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "file": "baseline_random_5.mid",
+      "model": "Random Generator",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 4,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 5,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 6,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 1
+        },
+        {
+          "participant_id": 7,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 10,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_1.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 5
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_10.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_2.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_3.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 5
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_4.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_5.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 1,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_6.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_7.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_8.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "rlhf_sample_9.mid",
+      "model": "RLHF-Tuned",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_classical_1.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_classical_6.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 2,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_electronic_10.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 5
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_electronic_5.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_jazz_2.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_jazz_7.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_pop_4.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_pop_9.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 5,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 5
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_rock_3.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "transformer_generated_rock_8.mid",
+      "model": "Transformer",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_classical.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_electronic.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 5
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_jazz.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_pop.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_random_1.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_random_2.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_random_3.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_generated_rock.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 3,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "vae_interpolation_1.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_interpolation_2.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 4,
+          "musicality": 1,
+          "coherence": 1,
+          "genre_match": 1,
+          "overall": 1
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_interpolation_3.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 2,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 3,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 4,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "vae_interpolation_4.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_interpolation_5.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 5,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "vae_slerp_1.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 5,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 6,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 4,
+          "coherence": 5,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 10,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 4,
+          "overall": 4
+        }
+      ]
+    },
+    {
+      "file": "vae_slerp_2.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 5,
+          "coherence": 5,
+          "genre_match": 5,
+          "overall": 5
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 2,
+          "coherence": 1,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 8,
+          "musicality": 2,
+          "coherence": 2,
+          "genre_match": 2,
+          "overall": 2
+        },
+        {
+          "participant_id": 9,
+          "musicality": 2,
+          "coherence": 3,
+          "genre_match": 1,
+          "overall": 2
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        }
+      ]
+    },
+    {
+      "file": "vae_slerp_3.mid",
+      "model": "VAE",
+      "ratings": [
+        {
+          "participant_id": 1,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 3
+        },
+        {
+          "participant_id": 2,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 3,
+          "musicality": 4,
+          "coherence": 3,
+          "genre_match": 5,
+          "overall": 4
+        },
+        {
+          "participant_id": 4,
+          "musicality": 4,
+          "coherence": 4,
+          "genre_match": 4,
+          "overall": 4
+        },
+        {
+          "participant_id": 5,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 6,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 7,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        },
+        {
+          "participant_id": 8,
+          "musicality": 3,
+          "coherence": 2,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 9,
+          "musicality": 3,
+          "coherence": 4,
+          "genre_match": 3,
+          "overall": 3
+        },
+        {
+          "participant_id": 10,
+          "musicality": 3,
+          "coherence": 3,
+          "genre_match": 2,
+          "overall": 3
+        }
+      ]
+    }
+  ]
+}

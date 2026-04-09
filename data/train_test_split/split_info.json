@@ -1,0 +1,18 @@
+{
+  "total_parsed": 296,
+  "train_ratio": 0.8,
+  "val_ratio": 0.1,
+  "test_ratio": 0.1,
+  "random_seed": 42,
+  "piano_roll_segments_total": 1500,
+  "train_segments": 1200,
+  "val_segments": 300,
+  "sequence_length": 64,
+  "genres": [
+    "classical",
+    "jazz",
+    "rock",
+    "pop",
+    "electronic"
+  ]
+}

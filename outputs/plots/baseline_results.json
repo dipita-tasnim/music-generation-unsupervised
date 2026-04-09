@@ -1,0 +1,14 @@
+{
+  "Random Generator": {
+    "pitch_histogram_similarity": 0.28630213653357517,
+    "rhythm_diversity": 0.004,
+    "repetition_ratio": 0.0,
+    "human_score": 1.1
+  },
+  "Markov Chain": {
+    "pitch_histogram_similarity": 0.0934939873453115,
+    "rhythm_diversity": 0.019,
+    "repetition_ratio": 0.002030456852791878,
+    "human_score": 2.3
+  }
+}

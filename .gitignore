@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Large generated files
+data/processed/parsed_midi.json
+
+# Virtual environments
+.venv/
+.venv-1/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp scripts
+fix_survey.py
+generate_diagrams.py
+sort_midi_by_genre.py

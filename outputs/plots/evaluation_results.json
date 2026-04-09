@@ -1,0 +1,282 @@
+{
+  "Task 1: Autoencoder": {
+    "pitch_histogram": [
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.25,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.25,
+      0.0,
+      0.0
+    ],
+    "rhythm_diversity": 0.05,
+    "repetition_ratio_mean": 0.0,
+    "repetition_ratio_std": 0.0,
+    "per_piece": [
+      {
+        "piece_index": 0,
+        "num_notes": 4,
+        "pitch_range": 10,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 1,
+        "num_notes": 4,
+        "pitch_range": 10,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 2,
+        "num_notes": 4,
+        "pitch_range": 10,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 3,
+        "num_notes": 4,
+        "pitch_range": 10,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 4,
+        "num_notes": 4,
+        "pitch_range": 10,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      }
+    ]
+  },
+  "Task 4: RLHF": {
+    "pitch_histogram": [
+      0.08704061895551257,
+      0.0851063829787234,
+      0.08704061895551257,
+      0.0851063829787234,
+      0.08704061895551257,
+      0.0851063829787234,
+      0.0851063829787234,
+      0.08704061895551257,
+      0.07736943907156674,
+      0.07930367504835589,
+      0.07736943907156674,
+      0.07736943907156674
+    ],
+    "rhythm_diversity": 0.005802707930367505,
+    "repetition_ratio_mean": 0.0,
+    "repetition_ratio_std": 0.0,
+    "per_piece": [
+      {
+        "piece_index": 0,
+        "num_notes": 128,
+        "pitch_range": 127,
+        "rhythm_diversity": 0.0078125,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 1,
+        "num_notes": 128,
+        "pitch_range": 127,
+        "rhythm_diversity": 0.0078125,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 2,
+        "num_notes": 128,
+        "pitch_range": 127,
+        "rhythm_diversity": 0.0078125,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 3,
+        "num_notes": 5,
+        "pitch_range": 10,
+        "rhythm_diversity": 0.6,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 4,
+        "num_notes": 128,
+        "pitch_range": 127,
+        "rhythm_diversity": 0.0078125,
+        "repetition_ratio": 0.0
+      }
+    ]
+  },
+  "Task 3: Transformer": {
+    "pitch_histogram": [
+      0.034722222222222224,
+      0.013888888888888888,
+      0.125,
+      0.005208333333333333,
+      0.22395833333333334,
+      0.010416666666666666,
+      0.08159722222222222,
+      0.08506944444444445,
+      0.003472222222222222,
+      0.24479166666666666,
+      0.005208333333333333,
+      0.16666666666666666
+    ],
+    "rhythm_diversity": 0.034722222222222224,
+    "repetition_ratio_mean": 0.04585532034955543,
+    "repetition_ratio_std": 0.0570189367754133,
+    "per_piece": [
+      {
+        "piece_index": 0,
+        "num_notes": 60,
+        "pitch_range": 57,
+        "rhythm_diversity": 0.15,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 1,
+        "num_notes": 41,
+        "pitch_range": 43,
+        "rhythm_diversity": 0.14634146341463414,
+        "repetition_ratio": 0.18421052631578946
+      },
+      {
+        "piece_index": 2,
+        "num_notes": 54,
+        "pitch_range": 60,
+        "rhythm_diversity": 0.1111111111111111,
+        "repetition_ratio": 0.11764705882352941
+      },
+      {
+        "piece_index": 3,
+        "num_notes": 59,
+        "pitch_range": 43,
+        "rhythm_diversity": 0.1016949152542373,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 4,
+        "num_notes": 61,
+        "pitch_range": 38,
+        "rhythm_diversity": 0.18032786885245902,
+        "repetition_ratio": 0.034482758620689655
+      },
+      {
+        "piece_index": 5,
+        "num_notes": 60,
+        "pitch_range": 38,
+        "rhythm_diversity": 0.1,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 6,
+        "num_notes": 61,
+        "pitch_range": 36,
+        "rhythm_diversity": 0.14754098360655737,
+        "repetition_ratio": 0.034482758620689655
+      },
+      {
+        "piece_index": 7,
+        "num_notes": 60,
+        "pitch_range": 43,
+        "rhythm_diversity": 0.13333333333333333,
+        "repetition_ratio": 0.05263157894736842
+      },
+      {
+        "piece_index": 8,
+        "num_notes": 61,
+        "pitch_range": 53,
+        "rhythm_diversity": 0.11475409836065574,
+        "repetition_ratio": 0.017241379310344827
+      },
+      {
+        "piece_index": 9,
+        "num_notes": 59,
+        "pitch_range": 53,
+        "rhythm_diversity": 0.15254237288135594,
+        "repetition_ratio": 0.017857142857142856
+      }
+    ]
+  },
+  "Task 2: VAE": {
+    "pitch_histogram": [
+      0.09824561403508772,
+      0.07719298245614035,
+      0.09824561403508772,
+      0.07719298245614035,
+      0.09824561403508772,
+      0.08421052631578947,
+      0.07719298245614035,
+      0.08771929824561403,
+      0.07017543859649122,
+      0.0912280701754386,
+      0.07017543859649122,
+      0.07017543859649122
+    ],
+    "rhythm_diversity": 0.03859649122807018,
+    "repetition_ratio_mean": 0.0,
+    "repetition_ratio_std": 0.0,
+    "per_piece": [
+      {
+        "piece_index": 0,
+        "num_notes": 6,
+        "pitch_range": 10,
+        "rhythm_diversity": 0.5,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 1,
+        "num_notes": 5,
+        "pitch_range": 8,
+        "rhythm_diversity": 0.6,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 2,
+        "num_notes": 4,
+        "pitch_range": 7,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 3,
+        "num_notes": 4,
+        "pitch_range": 7,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 4,
+        "num_notes": 128,
+        "pitch_range": 127,
+        "rhythm_diversity": 0.0234375,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 5,
+        "num_notes": 128,
+        "pitch_range": 127,
+        "rhythm_diversity": 0.0234375,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 6,
+        "num_notes": 6,
+        "pitch_range": 12,
+        "rhythm_diversity": 0.8333333333333334,
+        "repetition_ratio": 0.0
+      },
+      {
+        "piece_index": 7,
+        "num_notes": 4,
+        "pitch_range": 7,
+        "rhythm_diversity": 0.25,
+        "repetition_ratio": 0.0
+      }
+    ]
+  }
+}
